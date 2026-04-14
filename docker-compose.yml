@@ -26,7 +26,7 @@ services:
       - ./data:/data
       - ./logs:/app/logs
     environment:
-      - SQL_DSN=postgresql://root:r9Gh15DFatY4wBup8SX2iZ63O0R7cqLI@47.242.223.160:30743/zeabur # Zeabur PostgreSQL
+      - SQL_DSN=${SQL_DSN} # Set in Zeabur environment variables
 #      - SQL_DSN=root:123456@tcp(mysql:3306)/new-api  # Point to the mysql service, uncomment if using MySQL
       - REDIS_CONN_STRING=redis://redis
       - TZ=Asia/Shanghai
